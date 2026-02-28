@@ -329,28 +329,133 @@ h1 {
    MOBILE
 ================================= */
 @media (max-width: 768px) {
+    /* BODY */
+    body {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        padding: 20px;   /* Reduce padding on smaller screens */
+    }
+
+    /* CONTAINER */
+    .container {
+        padding: 0 20px; /* Add padding on the sides for container */
+    }
+
+    /* TITLE */
+    h1 {
+        font-size: 2rem; /* Make the title smaller for mobile */
+        margin-bottom: 30px;
+    }
+
+    /* TAGLINE */
+    .tagline {
+        font-size: 1rem;
+        margin-top: -15px;
+    }
+
+    /* INPUT SECTION (GLASS) */
+    .input-section {
+        padding: 16px;  /* Adjust padding */
+        margin-bottom: 20px; /* Reduce margin between sections */
+    }
+
+    .input-row {
+        flex-direction: column; /* Stack inputs vertically */
+        gap: 10px;  /* Space between input fields */
+    }
+
+    .input-field {
+        width: 100%;  /* Ensure inputs take full width */
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+
+    .add-btn {
+        width: 100%;  /* Make button full-width on mobile */
+        padding: 14px 0;
+    }
+
+    /* FOOD LIST (GLASS CARD) */
+    .food-list {
+        padding: 10px;  /* Reduce padding */
+        margin-bottom: 30px;
+    }
+
+    .list-header {
+        display: none;  /* Hide the list header on mobile */
+    }
+
+    .food-item {
+        grid-template-columns: 1fr;  /* Stack items in a single column */
+        gap: 10px;
+        padding: 16px;
+    }
+
+    .food-item span {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    /* STATUS BADGES */
+    .days-remaining {
+        font-size: 13px; /* Adjust font size */
+        padding: 6px 12px;  /* Adjust padding */
+    }
+
+    /* DELETE BUTTON */
+    .delete-btn,
+    .delete-reference-btn {
+        width: 100%;  /* Make buttons full-width */
+        padding: 12px 0;
+    }
+
+    /* REFERENCE SECTION */
+    .reference-section {
+        padding: 16px;  /* Adjust padding */
+        margin-top: 30px;
+    }
+
+    .reference-header {
+        display: none;  /* Hide header for references */
+    }
+
+    .reference-item {
+        grid-template-columns: 1fr;  /* Stack reference items in one column */
+        gap: 10px;
+        padding: 16px;
+    }
+
+    /* ADD NEW REFERENCE */
     .add-reference-section {
-        padding: 20px;  /* Adjust padding for smaller screens */
-        width: 100%;  /* Ensure the section takes up the full width on mobile */
-        box-sizing: border-box; /* Prevent layout issues */
+        padding: 20px;  /* Reduce padding for mobile */
+        width: 100%;   /* Make the section full width */
     }
 
     .add-reference-section h3 {
-        font-size: 1.5rem; /* Slightly smaller title for mobile */
-        margin-bottom: 10px; /* Adjust margin */
+        font-size: 1.4rem; /* Adjust font size */
+        margin-bottom: 15px; /* Adjust margin */
     }
 
     .add-reference-row {
-        flex-direction: column; /* Stack the input fields vertically */
-        gap: 16px;  /* Increase gap between inputs */
+        flex-direction: column; /* Stack inputs vertically */
+        gap: 16px;  /* Add gap between elements */
     }
 
     .reference-input {
-        width: 100%;  /* Make the input field take up full width */
+        width: 100%;  /* Make inputs full width */
+        padding: 14px 16px;
     }
 
     .add-reference-btn {
-        width: 100%;  /* Make the button take up full width */
-        padding: 14px 0; /* Adjust padding for button */
+        width: 100%;  /* Full width button */
+        padding: 14px 0;  /* Adjust button padding */
+    }
+
+    /* FOOD EXPIRY GUIDE */
+    .reference-table {
+        padding: 10px;  /* Reduce padding */
+    }
+
+    .reference-item {
+        padding: 16px 18px;  /* Adjust padding */
     }
 }
+
