@@ -1,0 +1,345 @@
+/* ===============================
+   RESET
+================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   BODY
+================================= */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+     radial-gradient(circle at 20% 20%, rgba(240, 128, 37, 0.27), transparent 40%),
+        radial-gradient(circle at 80% 50%, rgba(254, 215, 170, 0.345), transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(255,237,213,0.45), transparent 40%);
+        /* radial-gradient(circle at 20% 20%, rgba(45,212,191,0.25), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(167,139,250,0.18), transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(56,189,248,0.18), transparent 40%); */
+    z-index: -1;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                 'Helvetica Neue', Arial, sans-serif;
+    font-size: 18px;
+    background: linear-gradient(135deg, #fff7ed, #ffedd5, #fff1f2);
+    /* background: linear-gradient(135deg, #e6fffa, #ecfdf5, #f0fdfa); */
+    color: #0f172a;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* ===============================
+   CONTAINER
+================================= */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ===============================
+   TITLE
+================================= */
+h1 {
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    background: linear-gradient(90deg, #fb923c, #fda4af);
+    /* background: linear-gradient(90deg, #059669, #2dd4bf); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(255, 175, 119, 0.5);
+}
+
+/* TAGLINE */
+.tagline {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #475569;
+    margin-top: -28px;
+    margin-bottom: 40px;
+}
+
+/* ===============================
+   INPUT SECTION (GLASS)
+================================= */
+.input-section {
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.input-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-field {
+    padding: 14px 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    min-width: 140px;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.input-field:focus {
+    outline: none;
+     border-color: #fb923c;
+    box-shadow: 0 0 0 4px rgba(251,146,60,0.25);
+    /* border-color: #34d399;
+    box-shadow: 0 0 0 4px rgba(52,211,153,0.25); */
+}
+
+.add-btn {
+    /* background: linear-gradient(135deg, #10b981, #2dd4bf); */
+    background: linear-gradient(135deg, #fb923c, #fda4af);
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.add-btn:hover {
+    /* box-shadow: 0 10px 22px rgba(16,185,129,0.35); */
+    box-shadow: 0 10px 22px rgba(251,146,60,0.35);
+}
+
+/* ===============================
+   FOOD LIST (GLASS CARD)
+================================= */
+.food-list {
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 12px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.10);
+    border: 1px solid rgba(255,255,255,0.6);
+    overflow: hidden;
+}
+
+.list-header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) auto;
+    gap: 16px;
+    padding: 16px 20px;
+    background: linear-gradient(90deg, #fb923c, #fda4af);
+    /* background: linear-gradient(90deg, #10b981, #2dd4bf); */
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+}
+
+.list-items {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.food-item {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) auto;
+    gap: 16px;
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(226,232,240,0.6);
+    align-items: center;
+}
+
+.food-item:hover {
+    background: rgba(255,237,213,0.7);
+    /* background: rgba(240,253,250,0.7); */
+}
+
+.food-item span {
+    font-size: 15.5px;
+}
+
+.empty-state{
+    font-size: 15px;
+    text-align: center;
+}
+
+/* STATUS BADGES */
+.days-remaining {
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+}
+
+.days-remaining.safe {
+    background: #bbf7d0;
+    color: #065f46;
+}
+
+.days-remaining.warning {
+    background: #fde68a;
+    color: #92400e;
+}
+
+.days-remaining.expired {
+    background: #fecaca;
+    color: #7f1d1d;
+}
+
+/* DELETE BUTTON */
+.delete-btn,
+.delete-reference-btn {
+    background: #fca5a5;
+    color: #7f1d1d;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.delete-btn:hover,
+.delete-reference-btn:hover {
+    background: #f87171;
+    color: white;
+}
+
+/* ===============================
+   SHELF LIFE GUIDE (GLASS)
+================================= */
+.reference-section {
+    margin-top: 55px;
+}
+
+.reference-section h2 {
+    margin-bottom: 18px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #fb923c;
+    /* color: #059669; */
+}
+
+.reference-table {
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 12px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.10);
+    border: 1px solid rgba(255,255,255,0.6);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.reference-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    gap: 16px;
+    padding: 16px 20px;
+    background: linear-gradient(90deg, #fb923c, #fda4af);
+    /* background: linear-gradient(90deg, #10b981, #2dd4bf); */
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.reference-items {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.reference-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    gap: 16px;
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(226,232,240,0.6);
+    align-items: center;
+    font-size: 15.5px;
+}
+
+.reference-item:hover {
+    background: rgba(255,237,213,0.7);
+    /* background: rgba(240,253,250,0.7); */
+}
+
+/* ADD NEW REFERENCE */
+.add-reference-section {
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 26px;
+    border-radius: 12px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.10);
+    border: 1px solid rgba(255,255,255,0.6);
+    
+}
+
+.add-reference-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.reference-input {
+    padding: 14px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255,255,255,0.8);
+}
+
+.reference-input:focus {
+    outline: none;
+    border-color: #fb923c;
+    box-shadow: 0 0 0 4px rgba(251,146,60,0.25);
+    /* border-color: #34d399; */
+    /* box-shadow: 0 0 0 4px rgba(52,211,153,0.25); */
+}
+
+.add-reference-row {
+    display: flex;
+    gap: 12px;
+}
+
+.add-reference-btn {
+    background: linear-gradient(135deg, #fb923c, #fda4af);
+    /* background: linear-gradient(135deg, #10b981, #2dd4bf); */
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* ===============================
+   MOBILE
+================================= */
+@media (max-width: 768px) {
+    body { font-size: 16px; }
+
+    .input-row { flex-direction: column; }
+
+    .input-field { width: 100%; }
+
+    .list-header { display: none; }
+
+    .food-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 16px;
+    }
+}  

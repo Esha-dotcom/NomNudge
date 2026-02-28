@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Expiry Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>NomNudge</h1>
+        <p class="tagline">"A gentle nudge to use your food before it expires"</p>
+        
+        <div class="input-section">
+            <div class="input-row">
+                <select id="foodName" class="input-field">
+                    <option value="">Select Food</option>
+                </select>
+                <select id="storageLocation" class="input-field">
+                    <option value="">Location</option>
+                    <option value="Fridge">Fridge</option>
+                    <option value="Freezer">Freezer</option>
+                    <option value="Pantry">Pantry</option>
+                    <option value="Crisper Drawer">Crisper Drawer</option>
+                </select>
+                <input type="number" id="storagePeriod" placeholder="Days" class="input-field" min="1">
+                <input type="date" id="expiryDate" class="input-field">
+                <input type="email" id="userEmail" placeholder="Your Email" class="input-field">
+                <button id="addBtn" class="add-btn">Add</button>
+            </div>
+        </div>
+
+        <div class="food-list">
+            <div class="list-header">
+                <span>Food Name</span>
+                <span>Location</span>
+                <span>Shelf Life</span>
+                <span>Expiry Date</span>
+                <span>Remaining</span>
+                <span>Action</span>
+            </div>
+            <div id="foodItems" class="list-items">
+            </div>
+        </div>
+
+        <div class="reference-section">
+            <h2>Estimated Shelf Life Guide</h2>
+            <div class="reference-table">
+                <div class="reference-header">
+                    <span>Food Type</span>
+                    <span>Location</span>
+                    <span>Typical Period</span>
+                    <span>Action</span>
+                </div>
+                <div id="referenceItems" class="reference-items">
+                </div>
+            </div>
+            <div class="add-reference-section">
+                <h2>Add New Food Type to Guide</h2>
+                <div class="add-reference-row">
+                    <input type="text" id="referenceName" placeholder="Food Name" class="reference-input">
+                    <input type="text" id="referenceLocation" placeholder="Storage" class="reference-input">
+                    <input type="text" id="referencePeriod" placeholder="Period (e.g. 1 week)" class="reference-input">
+                    <button id="addReferenceBtn" class="add-reference-btn">Add to Guide</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+   emailjs.init("t30-EhEZtiwzHYOoz");
+})();
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
