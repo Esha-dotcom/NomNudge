@@ -2,27 +2,27 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# NomNudge🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: CookieByte
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: Devika Das B S - [Vidya Academy of Science and Technology]
+- Member 2: Esha K P - [Vidya Academy of Science and Technology]
 
 ### Hosted Project Link
-[mention your project hosted link here]
+https://nomnudge.netlify.app
 
 ### Project Description
-[2-3 lines about what your project does]
+NomNudge is a smart food expiry tracking web app that helps users monitor the shelf life of stored food items. It calculates expiry dates, shows remaining days, and sends reminder emails to reduce food waste.
 
 ### The Problem statement
-[What problem are you solving?]
+Many households forget stored food items, leading to unnecessary waste, health risks, and financial loss due to expired ingredients.
 
 ### The Solution
-[How are you solving it?]
+NomNudge allows users to record food items, storage location, and shelf life. The system calculates expiry dates, displays status indicators, and sends email reminders when items are about to expire.
 
 ---
 
@@ -31,25 +31,25 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used: HTML, CSS, JavaScript
+- Frameworks used: None (Vanilla JS implementation)
+- Libraries used: EmailJS (for sending reminder emails)
+- Tools used: VS Code, Web Browser, GitHub (optional), LocalStorage API
 
 **For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
+- Main components: Computer or laptop, internet connection
+- Specifications: Any modern device capable of running a web browser
+- Tools required: Web browser (Chrome, Edge, Firefox)
 
 ---
 
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: Record storage location, storage period, and expiration date
+- Feature 2: Automatically calculate expiration date based on storage period. Color-code display by remaining expiration date
+- Feature 3: Users can add new food types to the reference guide
+- Feature 4: Sends email alerts when items are about to expire.
 
 ---
 
@@ -70,7 +70,9 @@ List the key features of your project:
 ### For Hardware:
 
 #### Components Required
-[List all components needed with specifications]
+Laptop/Desktop or Smartphone
+Modern web browser (Chrome, Edge, Firefox, Safari)
+Internet connection (for email alerts)
 
 #### Circuit Setup
 [Explain how to set up the circuit]
