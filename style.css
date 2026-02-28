@@ -329,17 +329,28 @@ h1 {
    MOBILE
 ================================= */
 @media (max-width: 768px) {
-    body { font-size: 16px; }
-
-    .input-row { flex-direction: column; }
-
-    .input-field { width: 100%; }
-
-    .list-header { display: none; }
-
-    .food-item {
-        grid-template-columns: 1fr;
-        gap: 8px;
-        padding: 16px;
+    .add-reference-section {
+        padding: 20px;  /* Adjust padding for smaller screens */
+        width: 100%;  /* Ensure the section takes up the full width on mobile */
+        box-sizing: border-box; /* Prevent layout issues */
     }
-}  
+
+    .add-reference-section h3 {
+        font-size: 1.5rem; /* Slightly smaller title for mobile */
+        margin-bottom: 10px; /* Adjust margin */
+    }
+
+    .add-reference-row {
+        flex-direction: column; /* Stack the input fields vertically */
+        gap: 16px;  /* Increase gap between inputs */
+    }
+
+    .reference-input {
+        width: 100%;  /* Make the input field take up full width */
+    }
+
+    .add-reference-btn {
+        width: 100%;  /* Make the button take up full width */
+        padding: 14px 0; /* Adjust padding for button */
+    }
+}
